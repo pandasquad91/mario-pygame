@@ -1,0 +1,5 @@
+pre-commit==2.9.2
+pylint==2.8.2
+black
+flake8
+pygame>=2.0.0
