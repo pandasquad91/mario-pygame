@@ -4,11 +4,13 @@ An entry for MFGG Fangame Jam 5
 ### Installation
 This project is built with Python 3.7. It's recommended you create a virtual environment of Python 3.7 to install the project.
 
-### Docker setup
+### Docker setup [Deprecated]
 
 1) Install docker on your system
 2) `docker build -t mario-pygame .` in the main directory.
 3) `docker run -it --rm mario-pygame` to launch the application.
+
+Note: This is not currently working with pygame.
 
 ### Local build
 Install the requirements:
@@ -28,7 +30,7 @@ pytest...................................................................Passed
 If `black` detects necessary changes, it will update the file automatically! You'll have to restage and recommit the changes, though.
 
 Finally, you can launch the main script:
-`python main.py`
+`python src/main.py`
 
 ### Running unit tests
 `python -m unittest discover -s tests` in the main directory. You can also use pytest: `pytest tests/`. They'll be run automatically with commit hooks if you have them installed.
