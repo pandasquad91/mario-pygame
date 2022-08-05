@@ -3,31 +3,19 @@ Mario Pygame
 """
 
 import pygame
+from src import settings
+from src import title_screen
 
-WIDTH, HEIGHT = 900, 500
-WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Mario Pygame")
-
-WHITE = (255, 255, 255)
-FPS = 60
+# Initialize pygame screen
+WIN = pygame.display.set_mode((settings.WIDTH, settings.HEIGHT))
+pygame.display.set_caption(settings.TITLE)
 
 
 def main():
     """
-    basic game loop
+    main game
     """
-    clock = pygame.time.Clock()
-    run = True
-    while run:
-        clock.tick(FPS)
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                run = False
-
-        WIN.fill(WHITE)
-        pygame.display.update()
-
-    pygame.quit()
+    title_screen.display(WIN)
 
 
 if __name__ == "__main__":
