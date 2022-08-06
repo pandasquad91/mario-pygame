@@ -9,10 +9,18 @@ from src.screen.screen import Screen
 from src import settings
 
 
+# loading resources for this screen
 BACKGROUND = pygame.transform.scale(
     pygame.image.load(os.path.join("src/assets", "Super Mario World Map.png")),
     (settings.WIDTH, settings.HEIGHT),
 )
+# TODO: These may need scaling
+MARIO = pygame.transform.scale(
+    pygame.image.load(os.path.join("src/assets", "Mario.png")),
+    (300, 400),
+)
+TITLE = pygame.image.load(os.path.join("src/assets", "Mario Pygame Title.png"))
+PRESS_START = pygame.image.load(os.path.join("src/assets", "Press Start.png"))
 
 
 class TitleScreen(Screen):
@@ -27,25 +35,28 @@ class TitleScreen(Screen):
         2. Display Mario, the title, and Press Start text
         3. Play Music
         """
-        # should clock also be a param?
-        # clock = pygame.time.Clock()
-        # run = True
-        # while run:
-        #     clock.tick(settings.FPS)
-        #     for event in pygame.event.get():
-        #         if event.type == pygame.QUIT:
-        #             run = False
-
-        # does doing it this way work??
-
         # Display a background image
         surface.blit(BACKGROUND, (0, 0))
 
         # Display Mario in the center
+        mario_x = settings.CENTER_X - MARIO.get_width() / 2
+        mario_y = (
+            settings.CENTER_Y
+            - MARIO.get_height() / 2
+            - TITLE.get_height()
+            - PRESS_START.get_height()
+        )
+        surface.blit(MARIO, (mario_x, mario_y))
 
         # Display the title below Mario
+        title_x = settings.CENTER_X - TITLE.get_width() / 2
+        title_y = mario_y + MARIO.get_height() + 30
+        surface.blit(TITLE, (title_x, title_y))
 
         # Display Press Start at the bottom
+        press_start_x = settings.CENTER_X - PRESS_START.get_width() / 2
+        press_start_y = title_y + TITLE.get_height() + 15
+        surface.blit(PRESS_START, (press_start_x, press_start_y))
 
         # Do the screen update
         pygame.display.update()
