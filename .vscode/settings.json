@@ -1,4 +1,4 @@
 
 {
-    "python.pythonPath": "/home/miles/.pyenv/versions/3.7.10/envs/mario-pygame/bin/python" 
+    "python.defaultInterpreterPath": "/home/miles/.pyenv/shims/python"
 }
