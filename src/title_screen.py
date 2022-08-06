@@ -5,6 +5,7 @@ The title screen of the game
 import os
 import pygame
 from src import settings
+from src import game_over
 
 BACKGROUND = pygame.transform.scale(
     pygame.image.load(os.path.join("src/assets", "Super Mario World Map.png")),
@@ -28,7 +29,6 @@ def display(surface: pygame.Surface):
                 run = False
 
         # Display a background image
-        # surface.fill(settings.WHITE)
         surface.blit(BACKGROUND, (0, 0))
 
         # Display Mario in the center
@@ -45,4 +45,6 @@ def display(surface: pygame.Surface):
         if keys_pressed[pygame.K_RETURN]:
             run = False
 
-    pygame.quit()
+    # TODO: Should have better way of navigating between screens than this
+    # pygame.quit()
+    game_over.display(surface)
