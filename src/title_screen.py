@@ -2,8 +2,14 @@
 The title screen of the game
 """
 
+import os
 import pygame
 from src import settings
+
+BACKGROUND = pygame.transform.scale(
+    pygame.image.load(os.path.join("src/assets", "Super Mario World Map.png")),
+    (settings.WIDTH, settings.HEIGHT),
+)
 
 
 def display(surface: pygame.Surface):
@@ -21,7 +27,17 @@ def display(surface: pygame.Surface):
             if event.type == pygame.QUIT:
                 run = False
 
-        surface.fill(settings.WHITE)
+        # Display a background image
+        # surface.fill(settings.WHITE)
+        surface.blit(BACKGROUND, (0, 0))
+
+        # Display Mario in the center
+
+        # Display the title below Mario
+
+        # Display Press Start at the bottom
+
+        # Do the screen update
         pygame.display.update()
 
         # TODO: If the user presses enter, play a sound effect and load the next screen
