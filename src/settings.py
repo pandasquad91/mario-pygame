@@ -11,3 +11,7 @@ CENTER_X = WIDTH / 2
 CENTER_Y = HEIGHT / 2
 FPS = 60
 TITLE = "Mario Pygame"
+
+IMAGE_PATH = "src/assets/img"
+MUSIC_PATH = "src/assets/mus"
+SOUND_PATH = "src/assets/snd"

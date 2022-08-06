@@ -7,7 +7,7 @@ import pygame
 from src import settings
 from src.screen.screen import Screen
 
-GAME_OVER = pygame.image.load(os.path.join("src/assets", "Game Over.png"))
+GAME_OVER = pygame.image.load(os.path.join(settings.IMAGE_PATH, "Game Over.png"))
 
 
 class GameOverScreen(Screen):

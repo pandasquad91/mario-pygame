@@ -11,16 +11,15 @@ from src import settings
 
 # loading resources for this screen
 BACKGROUND = pygame.transform.scale(
-    pygame.image.load(os.path.join("src/assets", "Super Mario World Map.png")),
+    pygame.image.load(os.path.join(settings.IMAGE_PATH, "Super Mario World Map.png")),
     (settings.WIDTH, settings.HEIGHT),
 )
-# TODO: These may need scaling
 MARIO = pygame.transform.scale(
-    pygame.image.load(os.path.join("src/assets", "Mario.png")),
+    pygame.image.load(os.path.join(settings.IMAGE_PATH, "Mario.png")),
     (300, 400),
 )
-TITLE = pygame.image.load(os.path.join("src/assets", "Mario Pygame Title.png"))
-PRESS_START = pygame.image.load(os.path.join("src/assets", "Press Start.png"))
+TITLE = pygame.image.load(os.path.join(settings.IMAGE_PATH, "Mario Pygame Title.png"))
+PRESS_START = pygame.image.load(os.path.join(settings.IMAGE_PATH, "Press Start.png"))
 
 
 class TitleScreen(Screen):
