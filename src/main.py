@@ -27,7 +27,10 @@ def launch():
     # Continually navigate between screens until we quit
     while screen:
         # perform the game loop on this screen
-        screen.game_loop(WIN)
+        event = screen.game_loop(WIN)
+        # if the user manually hits the X, get out of the game loops so we quit
+        if event == pygame.QUIT:
+            break
         # when we exit this loop, use the controller to determine what screen we go to next
         screen = controller.next_screen()
         # get the new screen's controller, if we have one

@@ -16,7 +16,7 @@ class Screen(ABC):
 
     finished: bool = False
 
-    def game_loop(self, surface: pygame.Surface):
+    def game_loop(self, surface: pygame.Surface) -> int:
         """
         Main game loop for every screen
         """
@@ -25,7 +25,8 @@ class Screen(ABC):
             clock.tick(settings.FPS)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    self.finished = True
+                    # return an intention to quit the game entirely
+                    return pygame.QUIT
 
             self.render(surface)
 
