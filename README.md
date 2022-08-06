@@ -30,7 +30,7 @@ pytest...................................................................Passed
 If `black` detects necessary changes, it will update the file automatically! You'll have to restage and recommit the changes, though.
 
 Finally, you can launch the main script:
-`python src/main.py`
+`python -m src.main`
 
 ### Running unit tests
 `python -m unittest discover -s tests` in the main directory. You can also use pytest: `pytest tests/`. They'll be run automatically with commit hooks if you have them installed.
