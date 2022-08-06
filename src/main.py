@@ -25,7 +25,7 @@ def launch():
     controller = TitleController(screen)
 
     # Continually navigate between screens until we quit
-    while screen:
+    while screen and controller:
         # perform the game loop on this screen
         event = screen.game_loop(WIN)
         # if the user manually hits the X, get out of the game loops so we quit
