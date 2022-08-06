@@ -1,29 +1,27 @@
 """
-The game over screen
+Screen for the game over screen
 """
 
 import os
 import pygame
 from src import settings
+from src.screen.screen import Screen
 
 GAME_OVER = pygame.image.load(os.path.join("src/assets", "Game Over.png"))
 
 
-def display(surface: pygame.Surface):
+class GameOverScreen(Screen):
     """
-    TODO:
-    1. Display a black background
-    2. Display game over text
-    3. Play a game over jingle
+    Game Over Screen
     """
-    clock = pygame.time.Clock()
-    run = True
-    while run:
-        clock.tick(settings.FPS)
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                run = False
 
+    def render(self, surface: pygame.Surface):
+        """
+        TODO:
+        1. Display a black background
+        2. Display game over text
+        3. Play a game over jingle
+        """
         # Make a black screen
         surface.fill("black")
 
@@ -38,5 +36,3 @@ def display(surface: pygame.Surface):
 
         # Do the screen update
         pygame.display.update()
-
-    pygame.quit()
