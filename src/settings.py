@@ -15,3 +15,21 @@ TITLE = "Mario Pygame"
 IMAGE_PATH = "src/assets/img"
 MUSIC_PATH = "src/assets/mus"
 SOUND_PATH = "src/assets/snd"
+
+
+# TODO: this is temporary for testing creating a level
+level_map = [
+    "                            ",
+    "                            ",
+    "                            ",
+    " XX    XXX            XX    ",
+    " XX P                       ",
+    " XXXX         XX         XX ",
+    " XXXX       XX              ",
+    " XX    X  XXXX    XX  XX    ",
+    "       X  XXXX    XX  XXX   ",
+    "    XXXX  XXXXXX  XX  XXXX  ",
+    "XXXXXXXX  XXXXXX  XX  XXXX  ",
+]
+
+TILE_SIZE = 64

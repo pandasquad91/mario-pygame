@@ -8,16 +8,19 @@ This probably isn't the best way to do things, but I am but a humble noob
 from src.screen.screen import Screen
 from src.screen.title import TitleScreen
 from src.screen.game_over import GameOverScreen
+from src.screen.level import LevelScreen
 
 from src.controller.controller import Controller
 from src.controller.title import TitleController
 from src.controller.game_over import GameOverController
+from src.controller.level import LevelController
 
 
 # mapping each Screen class to its corresponding Controller class
 CONTROLLERS = {
     TitleScreen: TitleController,
     GameOverScreen: GameOverController,
+    LevelScreen: LevelController,
 }
 
 
