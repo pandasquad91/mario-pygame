@@ -5,7 +5,7 @@ Screen for a Level
 from typing import List
 import pygame
 from src.screen.screen import Screen
-from src.tile import Tile
+from src.game.tile import Tile
 from src.settings import TILE_SIZE
 
 

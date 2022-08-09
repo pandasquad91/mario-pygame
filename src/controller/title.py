@@ -7,7 +7,7 @@ from src.screen.title import TitleScreen
 
 # from src.screen.game_over import GameOverScreen
 from src.screen.level import LevelScreen
-from src.settings import level_map
+from src.assets.lvl.test_level import MAP
 
 
 class TitleController(Controller):
@@ -20,5 +20,5 @@ class TitleController(Controller):
 
     def next_screen(self):
         # Test loading a level
-        return LevelScreen(level_map)
+        return LevelScreen(MAP)
         # return GameOverScreen()
