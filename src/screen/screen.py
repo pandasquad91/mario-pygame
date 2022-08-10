@@ -29,6 +29,7 @@ class Screen(ABC):
                     return pygame.QUIT
 
             self.render(surface)
+            pygame.display.update()
 
     @abstractmethod
     def render(self, surface: pygame.Surface):

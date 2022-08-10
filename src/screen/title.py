@@ -57,9 +57,6 @@ class TitleScreen(Screen):
         press_start_y = title_y + TITLE.get_height() + 15
         surface.blit(PRESS_START, (press_start_x, press_start_y))
 
-        # Do the screen update
-        pygame.display.update()
-
         # TODO: If the user presses enter, play a sound effect and load the next screen
         keys_pressed = pygame.key.get_pressed()
         if keys_pressed[pygame.K_RETURN]:

@@ -33,6 +33,3 @@ class GameOverScreen(Screen):
                 settings.CENTER_Y - GAME_OVER.get_height() / 2,
             ),
         )
-
-        # Do the screen update
-        pygame.display.update()

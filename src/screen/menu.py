@@ -12,5 +12,4 @@ class MenuScreen(Screen):
     """
 
     def render(self, surface: pygame.Surface):
-        # Do the screen update
-        pygame.display.update()
+        pass

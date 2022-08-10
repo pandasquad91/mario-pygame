@@ -40,4 +40,3 @@ class LevelScreen(Screen):
         """
         surface.fill("black")
         self.tiles.draw(surface)
-        pygame.display.update()
