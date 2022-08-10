@@ -9,11 +9,13 @@ from src.screen.screen import Screen
 from src.screen.title import TitleScreen
 from src.screen.game_over import GameOverScreen
 from src.screen.level import LevelScreen
+from src.screen.menu import MenuScreen
 
 from src.controller.controller import Controller
 from src.controller.title import TitleController
 from src.controller.game_over import GameOverController
 from src.controller.level import LevelController
+from src.controller.menu import MenuController
 
 
 # mapping each Screen class to its corresponding Controller class
@@ -21,6 +23,7 @@ CONTROLLERS = {
     TitleScreen: TitleController,
     GameOverScreen: GameOverController,
     LevelScreen: LevelController,
+    MenuScreen: MenuController,
 }
 
 
