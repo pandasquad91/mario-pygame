@@ -25,3 +25,8 @@ TILE_SIZE = 64
 SPACE = " "
 WALL = "X"
 PLAYER = "P"
+
+# Menu selections
+ADVENTURE = 0
+LEVEL_SELECT = 1
+OPTIONS = 2
