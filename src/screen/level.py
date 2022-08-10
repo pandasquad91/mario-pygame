@@ -6,7 +6,7 @@ from typing import List
 import pygame
 from src.screen.screen import Screen
 from src.game.tile import Tile
-from src.settings import TILE_SIZE
+from src.settings import TILE_SIZE, WALL
 
 
 class LevelScreen(Screen):
@@ -26,8 +26,7 @@ class LevelScreen(Screen):
         self.tiles = pygame.sprite.Group()
         for row_index, row in enumerate(level_data):
             for col_index, col in enumerate(row):
-                # TODO: Make a list of symbols to check for later
-                if col == "X":
+                if col == WALL:
                     # position of the tile is equivalent to
                     # the row and col index * size of the tile
                     x_pos = col_index * TILE_SIZE
